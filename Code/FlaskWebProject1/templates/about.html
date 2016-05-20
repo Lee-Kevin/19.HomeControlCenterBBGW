@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}</h2>
+<h3>{{ message }}</h3>
+<body>
+    <p>
+        <font size="5" face="arial" color="green">
+            It is the first Wi-Fi + Bluetooth Low Energy (BLE) board from
+            BeagleBone community.Compared to the SeeedStudio BeagleBone Green it has a 2.4-GHz wireless module (MIMO Wi-Fi + Bluetooth)on board,
+            making it more suitable for IoT prototypes. Take Home Control Gateway for example, it can be used as the remote of a wide range of TVs,
+            media devices and more -- you connect with it over Bluetooth to control everything from your phone.
+        </font>
+    </p>
+    <center>
+        <img src="/static/images/bbgw1.png" />
+    </center>
+    <p>
+        <font size="5" face="arial" color="green">
+            Seeed Studio BeagleBone Green Wireless is able to support Node-RED installation to wire IoT.
+            Additionally, the core of the new board integrates with MRAA library, so users can program with more Grove modules.
+        </font>
+    </p>
+    <center>
+        <img src="/static/images/bbgw2.png" />
+    </center>
+    <p>
+        <font size="5" face="arial" color="green">
+            Seeed Studio BeagleBone Green Wireless includes Built-in 2.4 GHz TI WLinkTM8 Module with two antenna solutions.
+            The Wi-Fi feature supports AP and STA mode of communication, you don't need to drive installations
+            if connecting Wi-Fi with your devices but develop directly.
+        </font>
+    </p>
+    <p>
+        <font size="5" face="arial" color="green">
+            Seeed Studio BeagleBone Green Wireless is a second product in partnership after the success of
+            Seeed Studio BeagleBone Green launched last June. Followed the modification of its predecessor,
+            Beaglebone Black, it adds 2 Grove connectors, ditches HDMI connector and lowers down production cost.
+            By adding Grove, Seeed infuses diversity of BeagleBone boards thanks to its openness and great community support.
+        </font>
+    </p>
+    <br>
+</body>
+    {% endblock %}
