@@ -1,0 +1,34 @@
+#!/bin/bash
+### BEGIN INIT INFO  
+# Provides:          HomeControl  
+# Required-Start:    $local_fs $remote_fs $network $syslog  
+# Required-Stop:     $local_fs $remote_fs $network $syslog  
+# Default-Start:     2 3 4 5  
+# Default-Stop:      0 1 6  
+# Short-Description: home control demo seeed
+# Description:       seeed BBGW Demo 
+### END INIT INFO  
+  
+#/etc/init.d/homecontrol
+  
+#The following part always gets executed.  
+### BEGIN INIT INFO
+# Description: This service is used to start the python script
+### END INIT INFO
+ 
+case "$1" in
+    start)
+        echo "Starting Home Control"
+        python /var/lib/cloud9/examples/myapp/controlcenter/runserver.py &
+        ;;
+    stop)
+        echo "Stopping Home Control"
+        #killall ledblink.py
+        kill $(ps aux | grep -m 1 'python /var/lib/cloud9/examples/myapp/controlcenter/runserver.py' | awk '{ print $2 }')
+        ;;
+    *)
+        echo "Usage: Home control start|stop"
+        exit 1
+        ;;
+esac
+exit 0
